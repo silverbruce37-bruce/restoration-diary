@@ -1,0 +1,116 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Serif KR', serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(251, 191, 36, 0.3);
+  color: #fef3c7;
+}
+
+/* Focus Ring */
+:focus-visible {
+  outline: 2px solid rgba(251, 191, 36, 0.5);
+  outline-offset: 2px;
+}
+
+/* Prose Styles for Bible Text */
+.prose-amber {
+  --tw-prose-body: #fef3c7;
+  --tw-prose-headings: #fcd34d;
+  --tw-prose-lead: #fde68a;
+  --tw-prose-links: #f59e0b;
+  --tw-prose-bold: #fef3c7;
+  --tw-prose-counters: #d97706;
+  --tw-prose-bullets: #d97706;
+  --tw-prose-hr: #78350f;
+  --tw-prose-quotes: #fef3c7;
+  --tw-prose-quote-borders: #d97706;
+  --tw-prose-captions: #fde68a;
+  --tw-prose-code: #fef3c7;
+  --tw-prose-pre-code: #fef3c7;
+  --tw-prose-pre-bg: rgba(120, 53, 15, 0.3);
+  --tw-prose-th-borders: #92400e;
+  --tw-prose-td-borders: #78350f;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(251, 191, 36, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for textarea */
+textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: rgba(28, 25, 23, 0.5);
+  border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: rgba(251, 191, 36, 0.3);
+  border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: rgba(251, 191, 36, 0.5);
+}
+
+/* Button Hover Effects */
+button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Card Hover Effect */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

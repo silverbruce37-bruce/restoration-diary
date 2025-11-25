@@ -1,0 +1,23 @@
+{
+  "name": "restoration-meditation-diary",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "에스라-느헤미야 시대의 말씀을 통해 하나님의 경륜을 묵상하고 회복과 재건의 삶을 기록하는 신앙 성장 앱",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@google/genai": "^1.25.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
